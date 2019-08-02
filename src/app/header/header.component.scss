@@ -1,0 +1,22 @@
+.container{
+    background: rgba(160, 159, 159, 0.815);
+}
+ul{
+    overflow: hidden;
+    li{
+        margin-left: 35px;
+        list-style-type: none;
+        float: left;
+    }
+}
+
+.active{
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+}

@@ -1,0 +1,12 @@
+<form>
+    <br>
+    <label>Selecione o setor que abrir um chamado: </label>
+    <select [(ngModel)]="idFila " name="idFila">
+        <option *ngFor="let item of lerFila()" [value]="item.id">{{ item.nome }}</option>
+    </select>
+
+    <label>Descrição: </label>
+    <input [(ngModel)]="descricao " name="descricao" type="text">
+</form>
+<button (click)="criarChamado()">Criar Chamado</button>
+<app-botao texto="Voltar" (click)="voltar()"></app-botao>

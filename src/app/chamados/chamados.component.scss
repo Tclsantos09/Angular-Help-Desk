@@ -1,0 +1,19 @@
+.container{
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titulo{
+    font-family: monospace;
+}
+
+table{
+    width: 100%;
+    border-top: solid 1px;
+    border-bottom: 1px solid;
+
+    td{
+        padding-left: 10px;
+    }
+}

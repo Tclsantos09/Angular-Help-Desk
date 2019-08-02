@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="titulo">Chamados</h1>
+    <table>
+        <thead>
+            <td>#</td>
+            <td>Descrição</td>
+            <td>Status</td>
+            <td>Data abertura</td>
+            <td>Data Fechamento</td>
+            <td>Descrição Finalização</td>
+        </thead>
+        <tbody *ngFor="let item of leiaDosChamados()">
+            <tr [routerLink]="['/chamados/detalhes', item.id]" *ngIf="item.status !== 'fechado'">
+                <td>{{ item.id }}</td>
+                <td>{{ item.descricao }}</td>
+                <td>{{ item.status }}</td>
+                <td>{{ item.dataAbertura | date: 'dd/MM/yyyy' }}</td>
+                <td>{{ item.dataFechamento | date: 'dd/MM/yyyy' }}</td>
+                <td>{{ item.descricaoFinalizacao }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <app-botao texto="Voltar" (click)="voltar()"></app-botao>
+    <a [routerLink]="['/chamados/criar-chamado']">
+        <app-botao texto="Criar Chamado"></app-botao>
+    </a>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+    <table>
+        <tbody>
+            <tr>
+                <td>#{{ dadosDoChamado?.id }}</td>
+                <td>{{ dadosDoChamado.descricao }}</td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Status: </label>{{ dadosDoChamado.status }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Data de Abertura do Chamado: </label>{{ dadosDoChamado.dataAbertura | date: 'dd/MM/yyyy' }}
+                </td>
+                <td>
+                    <label>Data de Encerramento do Chamado:</label>{{ dadosDoChamado.dataFechamento | date: 'dd/MM/yyyy' }}
+                </td>
+            </tr>
+            <tr>
+                <td>{{ dadosDoChamado.descricaoFinalizacao }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-botao texto="Voltar" (click)="voltar()"></app-botao>
